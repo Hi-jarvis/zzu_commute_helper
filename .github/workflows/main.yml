@@ -30,9 +30,10 @@ jobs:
           # 这些sectret的环境变量需要配置在setting中的secret下
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
-          subject: 健康上报 (${{env.REPORT_DATE}})
-          body: file://result.html
+          subject: 每日健康上报 (${{env.REPORT_DATE}})
+          html_body: file://result.html
           to: 15736950281@163.com
-          from: GitHub Actions
+          from: 郑州大学
+          convert_markdown: true 
           content_type: text/html 
   
